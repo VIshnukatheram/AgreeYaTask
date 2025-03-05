@@ -20,6 +20,9 @@ namespace AgreeYaSolution.Controllers
         {
             try
             {
+
+
+            
                 string token = HttpContext.Session.GetString("JwtToken");
                 var response = _httpService.HttpGetCall(null, "https://localhost:7160/api/CURD/GetCustomerDetails?id=" + id, token);
                 if (response.Error == null)
